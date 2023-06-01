@@ -48,7 +48,7 @@ message = MIMEMultipart("alternative")
 msg = EmailMessage()
 s = URLSafeTimedSerializer('Thisisasecret')
 GMAIL_USER = 'trcyclop@gmail.com'
-GMAIL_APP_PASSWORD = 'ijbflwabtgrxgklz'
+GMAIL_APP_PASSWORD = '*************'
 #########################################################
 ############## Google OAuth #####################
 #########################################################
@@ -423,7 +423,7 @@ def sign_up():
 				token = s.dumps(email, salt='email-confirm')
 				link = url_for('auth.confirm_email', token=token,email=email,name=name,username=username,password1=password1,password2=password2, _external=True)
 				gmail_user = 'trcyclop@gmail.com'
-				gmail_app_password = 'ijbflwabtgrxgklz'
+				gmail_app_password = '*************'
 				sent_from = gmail_user
 				sent_to = email
 				sent_subject = "CyclopTr'ye Hoşgeldiniz!"
